@@ -12,8 +12,9 @@ class Bullet():
         self.posX = posX - (self.tamX/2)
         self.posY = posY - (self.tamY/2)
 
-    def fire(self, posX):
+    def fire(self, posX, posY):
         self.posX = posX
+        self.posY = posY
         self.shot = True
 
     def draw(self, screen):

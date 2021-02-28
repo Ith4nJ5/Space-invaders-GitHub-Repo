@@ -7,10 +7,10 @@ class Bullet_Pool():
         for i in range(poolS):
             self.pool.append(Bullet(300, 610))
 
-    def shoot(self, posX):
+    def shoot(self, posX, posY):
         for bullet in self.pool:
             if bullet.shot == False:
-                bullet.fire(posX)
+                bullet.fire(posX, posY)
                 break        
 
     def draw(self, screen):

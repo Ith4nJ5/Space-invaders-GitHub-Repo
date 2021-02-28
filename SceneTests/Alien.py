@@ -33,7 +33,7 @@ class Alien():
             self.posX = 0
             self.jump()
         
-        if self.posY >= 600:
+        if self.posY >= (600 - self.tamY):
             self.land = True
 
     def draw(self, screen):

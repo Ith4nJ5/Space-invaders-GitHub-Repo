@@ -8,7 +8,7 @@ class Alien_Fleet:
 
     def __init__(self, fleetX, fleetY):
         posX = 15
-        posY = 15
+        posY = 46
         for i in range(fleetX):
             for j in range(fleetY):
                 if j == 0:
@@ -19,7 +19,7 @@ class Alien_Fleet:
                     self.fleet.append(Alien(posX, posY, 1, (255,255,255)))
                 posY += 62
             posX += 45
-            posY = 15
+            posY = 46
 
     def draw(self, screen):
         for i in self.fleet:

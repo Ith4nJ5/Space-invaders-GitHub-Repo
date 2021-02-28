@@ -29,7 +29,7 @@ class Ship():
             self.posX = 0
     
     def shooting(self):
-        self.gun.shoot((self.posX + (self.tamX/2)))
+        self.gun.shoot((self.posX + (self.tamX/2)), (self.posY + (self.tamY/2)))
 
     def draw(self, screen):
         pygame.draw.rect(screen, (255, 255, 255), (self.posX, self.posY, self.tamX, self.tamY))
