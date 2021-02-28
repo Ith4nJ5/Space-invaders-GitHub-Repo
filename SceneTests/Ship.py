@@ -1,4 +1,5 @@
 import pygame
+from Bullet_Pool import Bullet_Pool
 
 class Ship():
     posX = 300
@@ -8,6 +9,7 @@ class Ship():
     speed = 2
     tamX = 30
     tamY = 10
+    gun = Bullet_Pool()
 
     def __init__(self, posX, posY):
         self.posX = posX - (self.tamX/2)
@@ -24,8 +26,10 @@ class Ship():
 
     def draw(self, screen):
         pygame.draw.rect(screen, (255, 255, 255), (self.posX, self.posY, self.tamX, self.tamY))
+        self.gun.draw(screen)
 
     def update(self):
+        self.gun.update()
         if self.moveR == True:
             self.movingR()
         
