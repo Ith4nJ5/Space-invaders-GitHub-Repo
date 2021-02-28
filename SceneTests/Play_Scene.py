@@ -35,7 +35,7 @@ class Play_Scene(Scene):
         for bullet in self.player1.gun.pool:
             for alien in self.alienFleet.fleet:
                 if (bullet.posY > alien.posY) and (bullet.posY < (alien.posY + alien.tamY)) and (bullet.posX >= alien.posX) and (bullet.posX <= (alien.posX + alien.tamX)):
-                    alien.destroyed = True
+                    alien.lifes -= 1
                     bullet.shot = False
         self.player1.update()
         self.alienFleet.update()
