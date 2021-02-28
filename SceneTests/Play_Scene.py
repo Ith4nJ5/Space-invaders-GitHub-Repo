@@ -22,6 +22,8 @@ class Play_Scene(Scene):
                 self.player1.moveL = True
             if event.key == pygame.K_RIGHT:
                 self.player1.moveR = True
+            if event.key == pygame.K_SPACE:
+                self.player1.shooting()
         else:
             self.player1.moveL = False
             self.player1.moveR = False

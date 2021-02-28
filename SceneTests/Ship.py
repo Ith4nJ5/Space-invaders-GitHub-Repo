@@ -14,9 +14,6 @@ class Ship():
     def __init__(self, posX, posY):
         self.posX = posX - (self.tamX/2)
         self.posY = posY - (self.tamY/2)
-        self.moveR = False
-        self.moveL = False
-        self.speed = 2
     
     def movingR(self):
         self.posX += self.speed
@@ -30,6 +27,9 @@ class Ship():
         
         if self.posX < 0:
             self.posX = 0
+    
+    def shooting(self):
+        self.gun.shoot((self.posX + (self.tamX/2)))
 
     def draw(self, screen):
         pygame.draw.rect(screen, (255, 255, 255), (self.posX, self.posY, self.tamX, self.tamY))
