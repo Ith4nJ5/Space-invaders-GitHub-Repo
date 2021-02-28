@@ -3,7 +3,7 @@ import pygame
 class Bullet():
     posX = 300
     posY = 610
-    speed = 5
+    speed = 8
     tamX = 3
     tamY = 9
     shoot = False

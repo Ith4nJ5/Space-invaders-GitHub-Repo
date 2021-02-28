@@ -6,7 +6,7 @@ class Ship():
     posY = 500
     moveR = False
     moveL = False
-    speed = 2
+    speed = 4
     tamX = 30
     tamY = 10
     gun = Bullet_Pool()
@@ -24,12 +24,22 @@ class Ship():
     def movingL(self):
         self.posX -= self.speed
 
+    def boundaries(self):
+        if self.posX > (600 - self.tamX):
+            self.posX = (600 - self.tamX)
+        
+        if self.posX < 0:
+            self.posX = 0
+
     def draw(self, screen):
         pygame.draw.rect(screen, (255, 255, 255), (self.posX, self.posY, self.tamX, self.tamY))
         self.gun.draw(screen)
 
     def update(self):
         self.gun.update()
+
+        self.boundaries()
+
         if self.moveR == True:
             self.movingR()
         
