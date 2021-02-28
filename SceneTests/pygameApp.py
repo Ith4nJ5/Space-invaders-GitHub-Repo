@@ -7,7 +7,7 @@ class pygameApp():
         self.running = True
         self.fps = 60
         self.active_scene = None
-        self.width = 800
+        self.width = 600
         self.height = 600
         self.init_pygame()
 
