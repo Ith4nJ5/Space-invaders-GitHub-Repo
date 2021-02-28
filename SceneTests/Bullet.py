@@ -22,6 +22,7 @@ class Bullet():
     def update(self):
         if self.shot == True:
             self.posY -= self.speed
-        if self.posY < -10:
+        if self. shot == False:
             self.posY = 610
+        if self.posY < -10:
             self.shot = False

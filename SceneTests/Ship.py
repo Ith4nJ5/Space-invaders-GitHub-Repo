@@ -9,7 +9,7 @@ class Ship():
     speed = 4
     tamX = 30
     tamY = 10
-    gun = Bullet_Pool()
+    gun = Bullet_Pool(5)
 
     def __init__(self, posX, posY):
         self.posX = posX - (self.tamX/2)

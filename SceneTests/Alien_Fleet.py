@@ -1,8 +1,10 @@
 from Alien import Alien
+from Score import Score
 
 class Alien_Fleet:
     fleet = []
     land = False
+    score = Score()
 
     def __init__(self, fleetX, fleetY):
         posX = 15
@@ -20,7 +22,9 @@ class Alien_Fleet:
 
     def update(self):
         for i in self.fleet:
-            i.update()
-        for j in self.fleet:
-            if j.land == True:
+            if i.destroyed == True:
+                self.fleet.remove(i)
+                self.score.plus(100)
+            if i.land == True:
                 self.land = True
+            i.update()
